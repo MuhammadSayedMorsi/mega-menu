@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+#main {
+  margin-top: 50px;
+  font-family: "Montserrat", sans-serif;
+  width: 1400px;
+  max-width: 100%;
+}
+#main .wrap-main-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 65px;
+  position: relative;
+}
+#main .wrap-main-links .normal-link {
+  list-style: none;
+  transition: all 0.4s ease-in-out;
+}
+@media (max-width: 668px) {
+  #main .wrap-main-links .normal-link {
+    padding: 0 15px;
+    margin-bottom: 16px;
+  }
+}
+#main .wrap-main-links .normal-link a {
+  text-decoration: none;
+  color: #003087;
+  font-size: 16px;
+  font-weight: bold;
+  border-right: 1px solid #cccccc;
+  display: inline-block;
+  padding: 0 10px 0 10px;
+}
+#main .wrap-main-links .normal-link a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #003087;
+  transition: all 0.3s;
+}
+#main .wrap-main-links .normal-link a:hover:after {
+  width: 100%;
+  transition: all 0.3s;
+}
+@media (max-width: 500px) {
+  #main .wrap-main-links .normal-link a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 320px) {
+  #main .wrap-main-links .normal-link a {
+    font-size: 11px;
+  }
+}
+
+.menu_button {
+  display: none;
+}
+
+.drop-down-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: inherit;
+}
+.drop-down-link:hover {
+  background-color: #f5f5f5;
+  border-width: 1px 1px 0 1px;
+  border-color: #707070;
+  border-style: solid;
+}
+.drop-down-link:hover #topnavigation {
+  border: 1px solid #707070;
+  max-height: 480px;
+  height: 480px;
+  padding-bottom: 50px;
+}
+.drop-down-link:hover:after {
+  content: "";
+  background-color: red;
+  z-index: 1000;
+}
+.drop-down-link #shop-all {
+  display: flex;
+  text-decoration: none;
+  color: #003087;
+  font-size: 16px;
+  font-weight: bold;
+}
+.drop-down-link #shop-all .burger-icon {
+  margin-right: 16px;
+}
+@media (max-width: 668px) {
+  .drop-down-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+}
+.drop-down-link #topnavigation {
+  background: #f5f5f5;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  max-height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.drop-down-link #topnavigation .content #topnavlist {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.drop-down-link #topnavigation .content #topnavlist .topnavitem {
+  list-style: none;
+  display: flex;
+}
+.drop-down-link #topnavigation .content #topnavlist .topnavitem .topnavparent {
+  font-size: 16px;
+  font-weight: bold;
+  color: #003087;
+  text-decoration: none;
+  height: 45px;
+  margin: 0 12px;
+  display: flex;
+  padding-left: 6px;
+  align-items: center;
+  width: 214px;
+}
+.drop-down-link #topnavigation .content #topnavlist .topnavitem .topnavparent:hover::after {
+  width: 0;
+}
+.drop-down-link #topnavigation .content #topnavlist .topnavitem .topnavparent:hover {
+  background-color: #fff;
+}
+.drop-down-link #topnavigation .content #topnavlist .topnavitem .topnavdrop {
+  transition: all 0.9s ease-in-out;
+  background-color: #f5f5f5;
+  margin: 0px 20px 20px 0px;
+  padding-top: 30px;
+  width: 81.21%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  animation: slideUp 0.3s ease;
+}
+.drop-down-link #topnavigation .content #topnavlist .topnavitem .topnavdrop .topnavcol {
+  margin-left: 27px;
+}
+.drop-down-link #topnavigation .content #topnavlist .topnavitem .topnavdrop .topnavcol a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #003087;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.drop-down-link #topnavigation .content #topnavlist .topnavitem .topnavdrop .topnavcol .label p {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.drop-down-link #topnavigation .content #topnavlist .topnavitem:hover .topnavdrop {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  max-height: 500px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
